@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\models\\winner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\models\\winner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\models\\lottery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\models\\lottery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\models\\present.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\models\\present.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\profiles\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\profiles\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\bll\\authbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\bll\\authbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\dal\\authdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\authdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\dal\\interfaces\\iauthdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\interfaces\\iauthdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\bll\\interfaces\\iauthbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\bll\\interfaces\\iauthbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\backend\\apiproject\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\appsettings.json",
+              "RelativeDocumentMoniker": "Project\\appsettings.json",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\appsettings.json*",
+              "RelativeToolTip": "Project\\appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-28T17:45:30.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Winner.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\Winner.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\Winner.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\Winner.cs*",
+              "RelativeToolTip": "Project\\Models\\Winner.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:44:23.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\User.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\User.cs",
+              "RelativeToolTip": "Project\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:29:07.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Present.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\Present.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\Present.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\Present.cs*",
+              "RelativeToolTip": "Project\\Models\\Present.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:28:16.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Lottery.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\Lottery.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\Lottery.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\Lottery.cs",
+              "RelativeToolTip": "Project\\Models\\Lottery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:28:10.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\LoginDto.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\LoginDto.cs",
+              "RelativeToolTip": "Project\\Models\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:28:08.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Card.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\Card.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\Card.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Models\\Card.cs",
+              "RelativeToolTip": "Project\\Models\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:26:54.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Profiles\\UserProfile.cs",
+              "RelativeDocumentMoniker": "Project\\Profiles\\UserProfile.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Profiles\\UserProfile.cs",
+              "RelativeToolTip": "Project\\Profiles\\UserProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:11:06.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppDBContext.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\AppDBContext.cs",
+              "RelativeDocumentMoniker": "Project\\AppDBContext.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\AppDBContext.cs",
+              "RelativeToolTip": "Project\\AppDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:10:44.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Program.cs",
+              "RelativeDocumentMoniker": "Project\\Program.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Program.cs",
+              "RelativeToolTip": "Project\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:09:12.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Project\\Controllers\\AuthController.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Project\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwCUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:08:11.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthBll.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\BLL\\AuthBll.cs",
+              "RelativeDocumentMoniker": "Project\\BLL\\AuthBll.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\BLL\\AuthBll.cs",
+              "RelativeToolTip": "Project\\BLL\\AuthBll.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:07:26.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAuthBll.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\BLL\\Interfaces\\IAuthBll.cs",
+              "RelativeDocumentMoniker": "Project\\BLL\\Interfaces\\IAuthBll.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\BLL\\Interfaces\\IAuthBll.cs",
+              "RelativeToolTip": "Project\\BLL\\Interfaces\\IAuthBll.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:07:11.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthDal.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\DAL\\AuthDal.cs",
+              "RelativeDocumentMoniker": "Project\\DAL\\AuthDal.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\DAL\\AuthDal.cs",
+              "RelativeToolTip": "Project\\DAL\\AuthDal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:06:26.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAuthDal.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\DAL\\Interfaces\\IAuthDal.cs",
+              "RelativeDocumentMoniker": "Project\\DAL\\Interfaces\\IAuthDal.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\backend\\ApiProject\\Project\\DAL\\Interfaces\\IAuthDal.cs",
+              "RelativeToolTip": "Project\\DAL\\Interfaces\\IAuthDal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T17:06:13.495Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
