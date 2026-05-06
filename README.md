@@ -1,1 +1,1 @@
-# Chinese sale
+# ChineseSale
