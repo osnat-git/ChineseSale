@@ -25,13 +25,13 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IAuthBll, AuthBll>();
-builder.Services.AddScoped<IAuthDal, AuthDal>();
+builder.Services.AddScoped<IAuthBll, AuthService>();
+builder.Services.AddScoped<IAuthDAL, AuthDAL>();
 
 // Configure JWT authentication
 var jwtSection = builder.Configuration.GetSection("JWTSettings");
 var jwtSettings = jwtSection.Get<JWTSettings>();
-var key = Encoding.UTF8.GetBytes(jwtSettings.SecretKey);
+//var key = Encoding.UTF8.GetBytes(jwtSettings.SecretKey);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -43,7 +43,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = jwtSettings.Issuer,
             ValidAudience = jwtSettings.Audience,
-            IssuerSigningKey = new SymmetricSecurityKey(key),
+            //IssuerSigningKey = new SymmetricSecurityKey(key),
             ClockSkew = TimeSpan.Zero
         };
     });

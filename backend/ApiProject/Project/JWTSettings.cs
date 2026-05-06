@@ -1,6 +1,6 @@
-﻿internal class JWTSettings
+﻿public class JWTSettings
 {
-    public char[] SecretKey { get; internal set; }
-    public string Issuer { get; internal set; }
-    public string Audience { get; internal set; }
+    public char[] SecretKey { get; set; }
+    public string Issuer { get; set; }
+    public string Audience { get; set; }
 }

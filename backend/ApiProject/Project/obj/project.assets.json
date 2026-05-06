@@ -4078,7 +4078,10 @@
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 5.0.6",
       "Microsoft.Data.SqlClient >= 6.1.3",
       "Microsoft.EntityFrameworkCore >= 8.0.22",
+      "Microsoft.EntityFrameworkCore.Abstractions >= 8.0.22",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 8.0.22",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.22",
+      "Microsoft.EntityFrameworkCore.Relational >= 8.0.22",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.22",
       "Microsoft.IdentityModel.Tokens >= 8.15.0",
@@ -4093,11 +4096,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\מחצית א\\Projects\\final2\\backend\\ApiProject\\Project\\Project.csproj",
+      "projectUniqueName": "M:\\מחצית א\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "M:\\מחצית א\\Projects\\final2\\backend\\ApiProject\\Project\\Project.csproj",
+      "projectPath": "M:\\מחצית א\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\215866328\\.nuget\\packages\\",
-      "outputPath": "M:\\מחצית א\\Projects\\final2\\backend\\ApiProject\\Project\\obj\\",
+      "outputPath": "M:\\מחצית א\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4113,6 +4116,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
+        "K:\\פרקטיקום\\נציבות מס הכנסה\\סמינר החדש תשפ_ו\\practicum-nugets": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4165,9 +4169,21 @@
             "target": "Package",
             "version": "[8.0.22, )"
           },
+          "Microsoft.EntityFrameworkCore.Abstractions": {
+            "target": "Package",
+            "version": "[8.0.22, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
+            "target": "Package",
+            "version": "[8.0.22, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[8.0.22, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[8.0.22, )"
           },

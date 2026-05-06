@@ -1258,7 +1258,7 @@
       "Card": {
         "required": [
           "id",
-          "isPaied",
+          "isPaid",
           "presentId",
           "userId"
         ],
@@ -1282,8 +1282,12 @@
           "user": {
             "$ref": "#/components/schemas/User"
           },
-          "isPaied": {
+          "isPaid": {
             "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -1336,19 +1340,20 @@
           "name": {
             "minLength": 1,
             "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
       },
       "Donor": {
         "required": [
-          "city",
-          "country",
           "email",
           "id",
+          "isActive",
           "name",
-          "phone",
-          "street"
+          "phone"
         ],
         "type": "object",
         "properties": {
@@ -1368,24 +1373,8 @@
             "minLength": 1,
             "type": "string"
           },
-          "street": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "city": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "country": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "presents": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Present"
-            },
-            "nullable": true
+          "isActive": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1402,18 +1391,6 @@
             "nullable": true
           },
           "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "street": {
-            "type": "string",
-            "nullable": true
-          },
-          "city": {
-            "type": "string",
-            "nullable": true
-          },
-          "country": {
             "type": "string",
             "nullable": true
           }
@@ -1450,6 +1427,20 @@
           "password": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Lottery": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "year": {
+            "type": "string",
+            "format": "date"
           }
         },
         "additionalProperties": false
@@ -1495,12 +1486,12 @@
             "format": "int32",
             "default": 10
           },
-          "cards": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Card"
-            },
+          "description": {
+            "type": "string",
             "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -1516,9 +1507,9 @@
             "type": "integer",
             "format": "int32"
           },
-          "category": {
-            "type": "string",
-            "nullable": true
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
           },
           "quantity": {
             "type": "integer",
@@ -1527,6 +1518,10 @@
           "price": {
             "type": "integer",
             "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1616,21 +1611,13 @@
             "type": "string",
             "nullable": true
           },
-          "street": {
-            "type": "string",
-            "nullable": true
-          },
-          "city": {
-            "type": "string",
-            "nullable": true
-          },
-          "country": {
-            "type": "string",
-            "nullable": true
-          },
           "password": {
             "type": "string",
             "nullable": true
+          },
+          "registerationTime": {
+            "type": "string",
+            "format": "date-time"
           },
           "role": {
             "type": "string",
@@ -1654,18 +1641,6 @@
             "nullable": true
           },
           "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "street": {
-            "type": "string",
-            "nullable": true
-          },
-          "city": {
-            "type": "string",
-            "nullable": true
-          },
-          "country": {
             "type": "string",
             "nullable": true
           },
@@ -1697,6 +1672,12 @@
         "additionalProperties": false
       },
       "Winner": {
+        "required": [
+          "id",
+          "lotteryId",
+          "presentId",
+          "userId"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -1711,19 +1692,12 @@
             "type": "integer",
             "format": "int32"
           },
-          "winningCardNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "present": {
-            "$ref": "#/components/schemas/Present"
-          },
-          "timeOfRaffle": {
+          "lotteryId": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
+          },
+          "lottery": {
+            "$ref": "#/components/schemas/Lottery"
           }
         },
         "additionalProperties": false
