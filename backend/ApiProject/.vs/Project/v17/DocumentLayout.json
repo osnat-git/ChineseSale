@@ -75,8 +75,7 @@
               "RelativeToolTip": "Project\\DAL\\Interfaces\\ICardDal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:27:42.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:27:42.41Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "Project\\BLL\\CardService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:26:48.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:26:48.747Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "Project\\BLL\\Interfaces\\ICardService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:26:08.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:26:08.79Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "Project\\Controllers\\CardController.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAwA0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:40.666Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:21:40.666Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "Project\\Profiles\\PresentProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:20.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:21:20.391Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "Project\\Profiles\\LotteryProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:13.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:21:13.235Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "Project\\Profiles\\DonatorProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:10.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:21:10.455Z"
             },
             {
               "$type": "Document",
@@ -166,8 +159,7 @@
               "RelativeToolTip": "Project\\Profiles\\CategoryProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:07.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:21:07.511Z"
             },
             {
               "$type": "Document",
@@ -179,8 +171,7 @@
               "RelativeToolTip": "Project\\Profiles\\CardProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:02.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T15:21:02.918Z"
             }
           ]
         }

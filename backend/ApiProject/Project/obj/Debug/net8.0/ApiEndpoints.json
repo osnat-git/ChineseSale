@@ -59,7 +59,7 @@
   {
     "ContainingType": "Project.Controllers.CardController",
     "Method": "AddCard",
-    "RelativePath": "Card/api/card/AddCard",
+    "RelativePath": "api/card/Card/AddCard",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
