@@ -1,6 +1,6 @@
 ﻿namespace Project.Models.ModelsDTO
 {
-    public class CategoryDTO
+    public class CategoryDto
     {
         public string Name { get; set; }
     }

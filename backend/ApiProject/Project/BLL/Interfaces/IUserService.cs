@@ -3,9 +3,9 @@ using Project.Models.ModelsDTO;
 
 namespace Project.BLL.Interfaces
 {
-    public interface IAuthBll
+    public interface IUserService
     {
-        Task<Result<string>> LoginUserAsync(string email, string password);
-        Task<Result<User>> RegisterUserAsync(UserDTO userDTO);
+        Task<Result<string>> Login(string email, string password);
+        Task<Result<User>> Register(UserDto userDto);
     }
 }

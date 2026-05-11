@@ -1,28 +1,37 @@
 ﻿using AutoMapper;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Project.BLL.Interfaces;
 using Project.DAL;
 using Project.DAL.Interfaces;
 using Project.Models;
 using Project.Models.ModelsDTO;
 using Project.Validators;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Project.BLL
 {
-    public class AuthService : IAuthBll
+    public class UserService : IUserService
     {
-        IAuthDAL _userDAL;
-        IMapper _mapper;
-        public AuthService(IAuthDAL user, IMapper mapper)
+        private readonly JWTSettings _jwtSettings;  // הוספת שדה להגדרות ה־JWT
+        private readonly IUserDal _userDal;
+        private readonly IMapper _mapper;
+        private readonly ILogger<UserService> _logger;
+        public UserService(IOptions<JWTSettings> jwtSettings, IUserDal user, IMapper mapper, ILogger<UserService> logger   )
         {
-            _userDAL = user;
+            _jwtSettings = jwtSettings.Value;
+            _userDal = user;
             _mapper = mapper;
+            _logger = logger;
         }
 
 
-        public async Task<Result<string>> LoginUserAsync(string email, string password)
+        public async Task<Result<string>> Login(string email, string password)
         {
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            if (!Validator.ValidEmail(email) || string.IsNullOrWhiteSpace(password))
             {
                 return new Result<string>
                 {
@@ -32,32 +41,77 @@ namespace Project.BLL
                 };
             }
 
-            if (!Validator.ValidEmail(email))
+            var user = await _userDal.GetUserByEmail(email);
+            if (user == null)
             {
                 return new Result<string>
                 {
                     Success = false,
-                    Message = "Invalid email or password format",
-                    Data = null
+                    Message = "Invalid email or password format"
                 };
             }
 
-            return await _userDAL.LoginUserAsync(email, password);
+            // השוואת סיסמאות: האם הסיסמה שהוזנה תואמת לסיסמה המוצפנת
+            bool isPasswordValid = BCrypt.Net.BCrypt.Verify(password, user.Password);
+
+            if (!isPasswordValid)
+            {
+                _logger.LogWarning($"Failed login attempt for email: {email}. Incorrect password.");
+                return new Result<string>
+                {
+                    Success = false,
+                    Message = "One or more of the identification details are incorrect. Please try again."
+                };
+            }
+
+            // יצירת טוקן JWT
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_jwtSettings.SecretKey); // המפתח הסודי מתוך קובץ הקונפיגורציה
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[] {
+                    new Claim(ClaimTypes.Name, user.Name),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim(ClaimTypes.Name, user.Role)
+
+                }),
+                Expires = DateTime.Now.AddHours(1.5),
+                Issuer = _jwtSettings.Issuer, // המוציא את המידע מתוך קובץ הקונפיגורציה
+                Audience = _jwtSettings.Audience, // קהל היעד מתוך קובץ הקונפיגורציה
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var tokenString = tokenHandler.WriteToken(token);
+
+            _logger.LogInformation($"User with email {email} logged in successfully.");
+            return new Result<string>
+            {
+                Success = true,
+                Message = tokenString // מחזירים את הטוקן בהודעה 
+            };
         }
 
-        public async Task<Result<User>> RegisterUserAsync(UserDTO userDTO)
+        public async Task<Result<User>> Register(UserDto userDto)
         {
-            if (userDTO != null && await _userDAL.DuplicateEmail(userDTO.Email) == false && Validator.ValidateData(userDTO.Name, userDTO.Email, userDTO.Phone))
+            if (userDto != null)
             {
-                var u = _mapper.Map<User>(userDTO);
-                if(u == null)
-                    return new Result<User>
-                    {
-                        Success = false,
-                        Message = "failed to map object",
-                        Data = null
-                    };
-                return await _userDAL.RegisterUserAsync(u);
+                var user = await _userDal.GetUserByEmail(userDto.Email);
+                if (user == null || user.Email == userDto.Email && Validator.ValidateData(userDto.Name, userDto.Email, userDto.Phone))
+                {
+                    var u = _mapper.Map<User>(userDto);
+                    Console.WriteLine("u: ", u);
+                    if (u == null)
+                        return new Result<User>
+                        {
+                            Success = false,
+                            Message = "failed to map object",
+                            Data = null
+                        };
+                    // הצפנת הסיסמה לפני שמירתה במסד הנתונים
+                    u.Password = BCrypt.Net.BCrypt.HashPassword(u.Password);
+                    return await _userDal.Register(u);
+                }
             }
             return new Result<User>
             {

@@ -2,10 +2,9 @@
 
 namespace Project.DAL.Interfaces
 {
-    public interface IAuthDAL
+    public interface IUserDal
     {
-        Task<Result<string>> LoginUserAsync(string email, string password);
-        Task<Result<User>> RegisterUserAsync(User user);
-        Task<bool> DuplicateEmail(string email);
+        Task<Result<User>> Register(User user);
+        Task<User> GetUserByEmail(string email);
     }
 }

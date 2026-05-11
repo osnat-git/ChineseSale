@@ -12,25 +12,25 @@ namespace Project.Controllers
     [Route("api/auth")] // הוספתי את הנתיב הבסיסי כאן
     public class UserController : ControllerBase
     {
-        private readonly IAuthBll _userService;
+        private readonly IUserService _userService;
 
-        public UserController(IAuthBll userService)
+        public UserController(IUserService userService)
         {
-            _userService = userService; 
+            _userService = userService;
         }
 
         // משתמש ב-POST על נתיב "login" ומצפה לשלוח את הנתונים ב-Body
-        [HttpPost("login")] 
-        public async Task<Result<string>> LoginUserAsync([FromBody] LoginDTO loginDTO) // שים לב לשימוש ב-FromBody
+        [HttpPost("login")]
+        public async Task<Result<string>> LoginUserAsync([FromQuery] string email, [FromQuery] string password) // שים לב לשימוש ב-FromBody
         {
-            return await _userService.LoginUserAsync(loginDTO.Email, loginDTO.Password);
+            return await _userService.Login(email, password);
         }
 
         // משתמש ב-POST על נתיב "register" ומצפה לשלוח את הנתונים ב-Body
-        [HttpPost("register")] 
-        public async Task<Result<User>> RegisterUserAsync([FromBody] UserDTO userDTO) // שים לב לשימוש ב-FromBody
+        [HttpPost("register")]
+        public async Task<Result<User>> Register([FromBody] UserDto userDto) // שים לב לשימוש ב-FromBody
         {
-            return await _userService.RegisterUserAsync(userDTO);
+            return await _userService.Register(userDto);
         }
     }
 }

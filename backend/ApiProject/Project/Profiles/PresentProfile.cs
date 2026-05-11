@@ -8,8 +8,9 @@ namespace Project
     {
         public PresentProfile()
         {
-            CreateMap<PresentDTO, Present>()
-                .ForMember(x => x.Id, y => y.MapFrom(s => Identity()));
+            CreateMap<PresentDto, Present>()
+                //.ForMember(x => x.Id, y => y.MapFrom(s => Identity()))
+                .ForMember(x => x.IsActive, y => y.MapFrom(s => true));
         }
         static int Id = 0;
         private int Identity()

@@ -1,6 +1,6 @@
 ﻿namespace Project.Models.ModelsDTO
 {
-    public class CardDTO
+    public class CardDto
     {
         public int PresentId { get; set; }
         public int UserId { get; set; }

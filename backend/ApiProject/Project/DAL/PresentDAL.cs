@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace Project.DAL
 {
     // מחלקת ה-DAL עבור מתנות
-    public class PresentDAL : IPresentDAL
+    public class PresentDal : IPresentDal
     {
         private readonly AppDBContext dbContext;  // מייצג את מסד הנתונים
-        private readonly ILogger<PresentDAL> logger; // אובייקט לוגים לתיעוד פעולות
+        private readonly ILogger<PresentDal> logger; // אובייקט לוגים לתיעוד פעולות
 
         // קונסטרוקטור - אתחול של ה-DBContext וה-Logger
-        public PresentDAL(AppDBContext dbContext, ILogger<PresentDAL> logger)
+        public PresentDal(AppDBContext dbContext, ILogger<PresentDal> logger)
         {
             this.dbContext = dbContext;  // אתחול ה-DBContext, מאפשר חיבור למסד הנתונים
             this.logger = logger;        // אתחול ה-Logger, מאפשר רישום פעולות

@@ -1,6 +1,6 @@
 ﻿namespace Project.Models.ModelsDTO
 {
-    public class UserDTO
+    public class UserDto
     {
         public string Name { get; set; }
         public string Phone { get; set; }

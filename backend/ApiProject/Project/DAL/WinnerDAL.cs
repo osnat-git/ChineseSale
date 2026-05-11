@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace Project.DAL
 {
-    public class WinnerDAL : IWinnerDAL
+    public class WinnerDal : IWinnerDal
     {
         private readonly AppDBContext dbContext;  // משתנה שמייצג את מסד הנתונים
-        private readonly ILogger<WinnerDAL> logger; // אובייקט ללוגים
+        private readonly ILogger<WinnerDal> logger; // אובייקט ללוגים
 
         // קונסטרוקטור - מאתחל את ה-DBContext ו-Logger
-        public WinnerDAL(AppDBContext dbContext, ILogger<WinnerDAL> logger)
+        public WinnerDal(AppDBContext dbContext, ILogger<WinnerDal> logger)
         {
             this.dbContext = dbContext;
             this.logger = logger;

@@ -14,133 +14,38 @@ using System.Threading.Tasks;
 
 namespace Project.DAL
 {
-    public class AuthDAL : IAuthDAL
+    public class UserDal : IUserDal
     {
         private readonly AppDBContext dbContext;
-        private readonly ILogger<AuthDAL> logger;
-        private readonly JWTSettings jwtSettings;  // הוספת שדה להגדרות ה־JWT
+        private readonly ILogger<UserDal> logger;
+        //private readonly JWTSettings jwtSettings;  // הוספת שדה להגדרות ה־JWT
 
-        public AuthDAL(AppDBContext context, ILogger<AuthDAL> logger, IOptions<JWTSettings> jwtSettings)
+        public UserDal(AppDBContext context, ILogger<UserDal> logger)
         {
             dbContext = context;
             this.logger = logger;
-            this.jwtSettings = jwtSettings.Value;
-        }
-        public async Task<Result<string>> LoginUserAsync(string email, string password)
-        {
-            try
-            {
-                // חיפוש המשתמש לפי המייל
-                var user = await dbContext.User
-                    .FirstOrDefaultAsync(u => u.Email == email); // לוודא שהמשתמש פעיל
-
-                if (user == null)
-                {
-                    logger.LogWarning($"Login failed for email: {email}. User not found.");
-                    return new Result<string>
-                    {
-                        Success = false,
-                        Message = "One or more of the identification details are incorrect. Please try again."
-                    };
-                }
-
-                // השוואת סיסמאות: האם הסיסמה שהוזנה תואמת לסיסמה המוצפנת
-                bool isPasswordValid = BCrypt.Net.BCrypt.Verify(password, user.Password);
-
-                if (!isPasswordValid)
-                {
-                    logger.LogWarning($"Failed login attempt for email: {email}. Incorrect password.");
-                    return new Result<string>
-                    {
-                        Success = false,
-                        Message = "One or more of the identification details are incorrect. Please try again."
-                    };
-                }
-
-                // יצירת טוקן JWT
-                var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.ASCII.GetBytes(jwtSettings.SecretKey); // המפתח הסודי מתוך קובץ הקונפיגורציה
-                var tokenDescriptor = new SecurityTokenDescriptor
-                {
-                    Subject = new ClaimsIdentity(new Claim[] {
-                new Claim(ClaimTypes.Name, user.Name),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Role)
-
-            }),
-                    Expires = DateTime.Now.AddHours(1.5),
-                    Issuer = jwtSettings.Issuer, // המוציא את המידע מתוך קובץ הקונפיגורציה
-                    Audience = jwtSettings.Audience, // קהל היעד מתוך קובץ הקונפיגורציה
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-                };
-
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-                var tokenString = tokenHandler.WriteToken(token);
-
-                logger.LogInformation($"User with email {email} logged in successfully.");
-                return new Result<string>
-                {
-                    Success = true,
-                    Message = tokenString // מחזירים את הטוקן בהודעה 
-                };
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "An error occurred during the login process.");
-                return new Result<string>
-                {
-                    Success = false,
-                    Message = "An error occurred during login. Please try again later."
-                };
-            }
+            //this.jwtSettings = jwtSettings.Value;
         }
 
-        public async Task<bool> DuplicateEmail(string email)
+        public async Task<User?> GetUserByEmail(string email)
         {
+            logger.LogInformation("GetUserByEmail function");
             try
             {
-                var existingUser = await dbContext.User
-                    .FirstOrDefaultAsync(u => u.Email == email);
-
-                if (existingUser != null)
-                {
-                    logger.LogWarning($"User with email {email} already exists.");
-                    return true;
-                    //return new Result<string>
-                    //{
-                    //    Success = false,
-                    //    Message = "Duplicate email",
-                    //    Data = null
-                    //};
-                }
-                //return new Result<string>
-                //{
-                //    Success = true,
-                //    Message = "This email doesn't exist.",
-                //    Data = null
-                //};
-                return false;
+                return await dbContext.User.FirstOrDefaultAsync(u => u.Email == email);
             }
 
             catch
             {
                 logger.LogError("could not find check duplicate email");
-                //return new Result<string>
-                //{
-                //    Success = true,
-                //    Message = "This email doesn't exist.",
-                //    Data = null
-                //};
-                return true;
+                return null;
             }
         }
 
-        public async Task<Result<User>> RegisterUserAsync(User user)
+        public async Task<Result<User>> Register(User user)
         {
             try
             {
-                // הצפנת הסיסמה לפני שמירתה במסד הנתונים
-                user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
                 await dbContext.User.AddAsync(user);
                 await dbContext.SaveChangesAsync();
 

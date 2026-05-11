@@ -25,13 +25,30 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IAuthBll, AuthService>();
-builder.Services.AddScoped<IAuthDAL, AuthDAL>();
+builder.Services.AddScoped<ICardService, CardService>();
+builder.Services.AddScoped<ICardDal, CardDal>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryDal, CategoryDal>();
+builder.Services.AddScoped<IDonorService, DonorService>();
+builder.Services.AddScoped<IDonorDal, DonorDal>();
+builder.Services.AddScoped<ILotteryService, LotteryService>();
+builder.Services.AddScoped<ILotteryDal, LotteryDal>();
+builder.Services.AddScoped<IPresentService, PresentService>();
+builder.Services.AddScoped<IPresentDal, PresentDal>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserDal, UserDal>();
+builder.Services.AddScoped<IWinnerService, WinnerService>();
+builder.Services.AddScoped<IWinnerDal, WinnerDal>();
+builder.Services.AddScoped<IEmailSender, EmailSender>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+// Configure JWTSettings
+builder.Services.Configure<JWTSettings>(builder.Configuration.GetSection("JWTSettings"));
 
 // Configure JWT authentication
 var jwtSection = builder.Configuration.GetSection("JWTSettings");
 var jwtSettings = jwtSection.Get<JWTSettings>();
-//var key = Encoding.UTF8.GetBytes(jwtSettings.SecretKey);
+var key = Encoding.UTF8.GetBytes(jwtSettings.SecretKey);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -43,7 +60,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
             ValidIssuer = jwtSettings.Issuer,
             ValidAudience = jwtSettings.Audience,
-            //IssuerSigningKey = new SymmetricSecurityKey(key),
+            IssuerSigningKey = new SymmetricSecurityKey(key),
             ClockSkew = TimeSpan.Zero
         };
     });
@@ -60,6 +77,9 @@ builder.Services.AddCors(options =>
                   .AllowAnyMethod(); // Allows any HTTP method
         });
 });
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 

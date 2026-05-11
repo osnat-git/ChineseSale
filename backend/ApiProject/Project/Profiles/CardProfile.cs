@@ -8,9 +8,10 @@ namespace Project
     {
         public CardProfile()
         {
-            CreateMap<CardDTO, Card>()
-                .ForMember(x => x.Id, y => y.MapFrom(s => Identity()))
-                .ForMember(x => x.IsPaid, y => y.MapFrom(s => false));
+            CreateMap<CardDto, Card>()
+                //.ForMember(x => x.Id, y => y.MapFrom(s => Identity()))
+                .ForMember(x => x.IsPaid, y => y.MapFrom(s => false))
+                .ForMember(x => x.CreatedAt, y => y.MapFrom(s => DateTime.Now));
         }
         static int Id = 0;
         private int Identity()

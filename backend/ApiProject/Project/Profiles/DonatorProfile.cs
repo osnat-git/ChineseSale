@@ -8,8 +8,9 @@ namespace Project.Profiles
     {
         public DonorProfile()
         {
-            CreateMap<DonorDTO, Donor>()
-                .ForMember(x => x.Id, y => y.MapFrom(s => Identity()));
+            CreateMap<DonorDto, Donor>()
+                //.ForMember(x => x.Id, y => y.MapFrom(s => Identity()))
+                .ForMember(x => x.IsActive, y => y.MapFrom(s => true));
         }
         static int Id = 0;
         private int Identity()
