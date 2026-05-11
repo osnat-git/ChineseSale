@@ -1,5 +1,6 @@
 ./vs
 ./node_modules
+*.dll
 
 # Created by https://www.toptal.com/developers/gitignore/api/angular,csharp
 # Edit at https://www.toptal.com/developers/gitignore?templates=angular,csharp

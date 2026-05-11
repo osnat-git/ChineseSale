@@ -72,8 +72,7 @@ namespace Project.BLL
                 Subject = new ClaimsIdentity(new Claim[] {
                     new Claim(ClaimTypes.Name, user.Name),
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new Claim(ClaimTypes.Name, user.Role)
-
+                    new Claim(ClaimTypes.Role, user.Role)  // Fixed: Use ClaimTypes.Role instead of ClaimTypes.Name
                 }),
                 Expires = DateTime.Now.AddHours(1.5),
                 Issuer = _jwtSettings.Issuer, // המוציא את המידע מתוך קובץ הקונפיגורציה

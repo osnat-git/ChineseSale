@@ -3,44 +3,8 @@
   "WorkspaceRootPath": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\dal\\carddal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\carddal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\dal\\interfaces\\icarddal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\interfaces\\icarddal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\bll\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\bll\\cardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\bll\\interfaces\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\bll\\interfaces\\icardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\controllers\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\controllers\\cardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\profiles\\presentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\profiles\\presentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\profiles\\lotteryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\profiles\\lotteryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\profiles\\donatorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\profiles\\donatorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\profiles\\categoryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\profiles\\categoryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\profiles\\cardprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\profiles\\cardprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\dal\\categorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\categorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,123 +19,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CardDal.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CardDal.cs",
-              "RelativeDocumentMoniker": "Project\\DAL\\CardDal.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CardDal.cs",
-              "RelativeToolTip": "Project\\DAL\\CardDal.cs",
-              "ViewState": "AgIAACkBAAAAAAAAAAAwwCUBAAAvAAAAAAAAAA==",
+              "Title": "CategoryDal.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CategoryDal.cs",
+              "RelativeDocumentMoniker": "Project\\DAL\\CategoryDal.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CategoryDal.cs",
+              "RelativeToolTip": "Project\\DAL\\CategoryDal.cs",
+              "ViewState": "AgIAAIkCAAAAAAAAAAArwJcCAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:27:56.144Z",
+              "WhenOpened": "2026-05-11T15:35:28.534Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ICardDal.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\Interfaces\\ICardDal.cs",
-              "RelativeDocumentMoniker": "Project\\DAL\\Interfaces\\ICardDal.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\Interfaces\\ICardDal.cs",
-              "RelativeToolTip": "Project\\DAL\\Interfaces\\ICardDal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:27:42.41Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CardService.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\BLL\\CardService.cs",
-              "RelativeDocumentMoniker": "Project\\BLL\\CardService.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\BLL\\CardService.cs",
-              "RelativeToolTip": "Project\\BLL\\CardService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:26:48.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ICardService.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\BLL\\Interfaces\\ICardService.cs",
-              "RelativeDocumentMoniker": "Project\\BLL\\Interfaces\\ICardService.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\BLL\\Interfaces\\ICardService.cs",
-              "RelativeToolTip": "Project\\BLL\\Interfaces\\ICardService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:26:08.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CardController.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Controllers\\CardController.cs",
-              "RelativeDocumentMoniker": "Project\\Controllers\\CardController.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Controllers\\CardController.cs",
-              "RelativeToolTip": "Project\\Controllers\\CardController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAwA0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:40.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PresentProfile.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\PresentProfile.cs",
-              "RelativeDocumentMoniker": "Project\\Profiles\\PresentProfile.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\PresentProfile.cs",
-              "RelativeToolTip": "Project\\Profiles\\PresentProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:20.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LotteryProfile.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\LotteryProfile.cs",
-              "RelativeDocumentMoniker": "Project\\Profiles\\LotteryProfile.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\LotteryProfile.cs",
-              "RelativeToolTip": "Project\\Profiles\\LotteryProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:13.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DonatorProfile.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\DonatorProfile.cs",
-              "RelativeDocumentMoniker": "Project\\Profiles\\DonatorProfile.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\DonatorProfile.cs",
-              "RelativeToolTip": "Project\\Profiles\\DonatorProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:10.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryProfile.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\CategoryProfile.cs",
-              "RelativeDocumentMoniker": "Project\\Profiles\\CategoryProfile.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\CategoryProfile.cs",
-              "RelativeToolTip": "Project\\Profiles\\CategoryProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:07.511Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CardProfile.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\CardProfile.cs",
-              "RelativeDocumentMoniker": "Project\\Profiles\\CardProfile.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Profiles\\CardProfile.cs",
-              "RelativeToolTip": "Project\\Profiles\\CardProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T15:21:02.918Z"
             }
           ]
         }

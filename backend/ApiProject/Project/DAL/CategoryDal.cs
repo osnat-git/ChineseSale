@@ -12,46 +12,330 @@ namespace Project.DAL
     public class CategoryDal : ICategoryDal
     {
         private readonly AppDBContext dbContext;  // משתנה שמייצג את מסד הנתונים
-        private readonly ILogger<CardDal> logger; // אובייקט ללוגים
+        private readonly ILogger<CategoryDal> logger; // אובייקט ללוגים
 
-        //// קונסטרוקטור - תפקידו לחבר את ה-DBContext וה-Logger למחלקה
-        //public CategoryDal(AppDBContext dbContext, ILogger<CardDal> logger)
-        //{
-        //    this.dbContext = dbContext;  // מאתחלים את ה-DBContext
-        //    this.logger = logger;        // מאתחלים את ה-Logger
-        //}
+        // קונסטרוקטור - תפקידו לחבר את ה-DBContext וה-Logger למחלקה
+        public CategoryDal(AppDBContext dbContext, ILogger<CategoryDal> logger)
+        {
+            this.dbContext = dbContext;  // מאתחלים את ה-DBContext
+            this.logger = logger;        // מאתחלים את ה-Logger
+        }
 
+        // Get all active categories
+        public async Task<Result<Category>> GetAllCategoriesAsync(bool includeInactive = false)
+        {
+            try
+            {
+                var query = dbContext.Category.AsQueryable();
+                
+                // Filter to active categories only, unless explicitly requested otherwise
+                if (!includeInactive)
+                {
+                    query = query.Where(c => c.IsActive == true);
+                }
 
-        //// צפייה בפרטי הרוכשים עבור כל מתנה
-        //public async Task<Result<User>> GetAllCardBuyersAsync()
-        //{
-        //    try
-        //    {
-        //        // מביאים את כל הכרטיסים ומחזירים את המידע על הרוכשים (Users)
-        //        var buyers = await dbContext.Card
-        //            .Where(c => c.IsPaid == true)
-        //            .Include(c => c.User)  // טוענים את המידע על הרוכש (User)
-        //            .Select(c => c.User)  // מחזירים את המידע על הרוכש לכל כרטיס
-        //            .Distinct()  // מבטיחים שלא יהיו כפילויות של רוכשים, גם אם רכשו מספר כרטיסים
-        //            .ToListAsync();  // מחזירים את התוצאות בצורה אסינכרונית
+                var categories = await query.ToListAsync();
 
-        //        logger.LogInformation("Fetched all card buyers without duplicates.");
+                logger.LogInformation("Fetched all categories successfully.");
 
-        //        return new Result<User>
-        //        {
-        //            Success = true,
-        //            Message = "Fetched all card buyers successfully.",
-        //            Data = buyers  // מחזירים את פרטי כל הרוכשים (בלי כפילויות)
-        //        };
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // במקרה של שגיאה, נרשום אותה בלוג
-        //        logger.LogError(ex, "Error fetching all card buyers.");
-        //        return new Result<User>
-        //        {
-        //            Success = false,
-        //            Message = "Error fetching all card buyers: " + ex.Message,
+                return new Result<Category>
+                {
+                    Success = true,
+                    Message = "Fetched all categories successfully.",
+                    Data = categories
+                };
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error fetching all categories.");
+                return new Result<Category>
+                {
+                    Success = false,
+                    Message = $"Error fetching all categories: {ex.Message}",
+                    Data = Enumerable.Empty<Category>()
+                };
+            }
+        }
+
+        // Get category by ID
+        public async Task<Result<Category>> GetCategoryByIdAsync(int id)
+        {
+            try
+            {
+                if (id <= 0)
+                {
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = "Invalid category ID.",
+                        Data = null
+                    };
+                }
+
+                var category = await dbContext.Category.FindAsync(id);
+
+                if (category == null)
+                {
+                    logger.LogWarning($"Category with ID {id} not found.");
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = $"Category with ID {id} not found.",
+                        Data = null
+                    };
+                }
+
+                logger.LogInformation($"Fetched category with ID {id} successfully.");
+
+                return new Result<Category>
+                {
+                    Success = true,
+                    Message = "Category fetched successfully.",
+                    Data = new List<Category> { category }
+                };
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, $"Error fetching category with ID {id}.");
+                return new Result<Category>
+                {
+                    Success = false,
+                    Message = $"Error fetching category: {ex.Message}",
+                    Data = null
+                };
+            }
+        }
+
+        // Check if category name exists (for duplicate checking)
+        public async Task<Result<bool>> CategoryNameExistsAsync(string name, int? excludeCategoryId = null)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(name))
+                {
+                    return new Result<bool>
+                    {
+                        Success = true,
+                        Message = "Invalid name provided.",
+                        Data = new List<bool> { false }
+                    };
+                }
+
+                var query = dbContext.Category.Where(c => c.Name.ToLower() == name.ToLower());
+
+                if (excludeCategoryId.HasValue)
+                {
+                    query = query.Where(c => c.Id != excludeCategoryId.Value);
+                }
+
+                var exists = await query.AnyAsync();
+
+                return new Result<bool>
+                {
+                    Success = true,
+                    Message = exists ? "Category name already exists" : "Category name is unique",
+                    Data = new List<bool> { exists }
+                };
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, $"Error checking if category name '{name}' exists.");
+                return new Result<bool>
+                {
+                    Success = false,
+                    Message = $"Error checking duplicate name: {ex.Message}",
+                    Data = new List<bool> { false }
+                };
+            }
+        }
+
+        // Create new category
+        public async Task<Result<Category>> CreateCategoryAsync(Category category)
+        {
+            try
+            {
+                if (category == null || string.IsNullOrWhiteSpace(category.Name))
+                {
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = "Category name is required.",
+                        Data = null
+                    };
+                }
+
+                // Check for duplicate name
+                var nameExists = await dbContext.Category
+                    .AnyAsync(c => c.Name.ToLower() == category.Name.ToLower());
+
+                if (nameExists)
+                {
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = $"Category with name '{category.Name}' already exists.",
+                        Data = null
+                    };
+                }
+
+                await dbContext.Category.AddAsync(category);
+                await dbContext.SaveChangesAsync();
+
+                logger.LogInformation($"Category '{category.Name}' created successfully.");
+
+                return new Result<Category>
+                {
+                    Success = true,
+                    Message = $"Category '{category.Name}' created successfully.",
+                    Data = new List<Category> { category }
+                };
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error creating category.");
+                return new Result<Category>
+                {
+                    Success = false,
+                    Message = $"Error creating category: {ex.Message}",
+                    Data = null
+                };
+            }
+        }
+
+        // Update existing category
+        public async Task<Result<Category>> UpdateCategoryAsync(Category category)
+        {
+            try
+            {
+                if (category == null || category.Id <= 0)
+                {
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = "Invalid category ID.",
+                        Data = null
+                    };
+                }
+
+                if (string.IsNullOrWhiteSpace(category.Name))
+                {
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = "Category name is required.",
+                        Data = null
+                    };
+                }
+
+                var existingCategory = await dbContext.Category.FindAsync(category.Id);
+
+                if (existingCategory == null)
+                {
+                    logger.LogWarning($"Category with ID {category.Id} not found.");
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = $"Category with ID {category.Id} not found.",
+                        Data = null
+                    };
+                }
+
+                // Check for duplicate name (excluding current category)
+                var nameExists = await dbContext.Category
+                    .AnyAsync(c => c.Name.ToLower() == category.Name.ToLower() && c.Id != category.Id);
+
+                if (nameExists)
+                {
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = $"Another category with name '{category.Name}' already exists.",
+                        Data = null
+                    };
+                }
+
+                existingCategory.Name = category.Name;
+                existingCategory.IsActive = category.IsActive;
+
+                dbContext.Category.Update(existingCategory);
+                await dbContext.SaveChangesAsync();
+
+                logger.LogInformation($"Category '{category.Name}' updated successfully.");
+
+                return new Result<Category>
+                {
+                    Success = true,
+                    Message = $"Category '{category.Name}' updated successfully.",
+                    Data = new List<Category> { existingCategory }
+                };
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error updating category.");
+                return new Result<Category>
+                {
+                    Success = false,
+                    Message = $"Error updating category: {ex.Message}",
+                    Data = null
+                };
+            }
+        }
+
+        // Soft delete - mark category as inactive
+        public async Task<Result<Category>> DeleteCategoryAsync(int id)
+        {
+            try
+            {
+                if (id <= 0)
+                {
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = "Invalid category ID.",
+                        Data = null
+                    };
+                }
+
+                var category = await dbContext.Category.FindAsync(id);
+
+                if (category == null)
+                {
+                    logger.LogWarning($"Category with ID {id} not found.");
+                    return new Result<Category>
+                    {
+                        Success = false,
+                        Message = $"Category with ID {id} not found.",
+                        Data = null
+                    };
+                }
+
+                // Soft delete: mark as inactive instead of hard delete
+                category.IsActive = false;
+                dbContext.Category.Update(category);
+                await dbContext.SaveChangesAsync();
+
+                logger.LogInformation($"Category with ID {id} deleted successfully (soft delete).");
+
+                return new Result<Category>
+                {
+                    Success = true,
+                    Message = $"Category with ID {id} deleted successfully.",
+                    Data = null
+                };
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, $"Error deleting category with ID {id}.");
+                return new Result<Category>
+                {
+                    Success = false,
+                    Message = $"Error deleting category: {ex.Message}",
+                    Data = null
+                };
+            }
+        }
+    }
+}
         //            Data = Enumerable.Empty<User>()  // מחזירים רשימה ריקה במקרה של שגיאה
         //        };
         //    }
@@ -376,5 +660,5 @@ namespace Project.DAL
         //        };
         //    }
         //}
-    }
-}
+//    }
+//}
