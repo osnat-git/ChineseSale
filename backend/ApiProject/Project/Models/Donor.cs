@@ -14,5 +14,9 @@ namespace Project.Models
         public string Email { get; set; }
         [Required]
         public bool IsActive { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public int CreatedBy { get; set; }
+        public ICollection<Present> Presents { get; set; } = new List<Present>();
     }
 }

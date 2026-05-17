@@ -14,5 +14,19 @@ namespace Project
         public DbSet<User> User { get; set; }
         public DbSet<Winner> Winner { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Donor>()
+                .HasIndex(d => d.Email)
+                .IsUnique();
+
+            modelBuilder.Entity<Present>()
+                .HasOne(p => p.Donor)
+                .WithMany(d => d.Presents)
+                .HasForeignKey(p => p.DonorId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
     }
 }

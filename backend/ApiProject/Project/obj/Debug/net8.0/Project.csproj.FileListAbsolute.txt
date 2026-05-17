@@ -1307,7 +1307,7 @@ M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debu
 M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debug\net8.0\staticwebassets.build.json.cache
 M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debug\net8.0\staticwebassets.development.json
 M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debug\net8.0\Project.csproj.Up2Date
 M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debug\net8.0\Project.genruntimeconfig.cache
 M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debug\net8.0\ref\Project.dll
+M:\מחצית א\Projects\final2\ChineseSale\backend\ApiProject\Project\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -21,7 +21,7 @@ namespace Project.Controllers
 
         // משתמש ב-POST על נתיב "login" ומצפה לשלוח את הנתונים ב-Body
         [HttpPost("login")]
-        public async Task<Result<string>> LoginUserAsync([FromQuery] string email, [FromQuery] string password) // שים לב לשימוש ב-FromBody
+        public async Task<Result<string>> LoginUserAsync([FromQuery] string email, [FromQuery] string password)
         {
             return await _userService.Login(email, password);
         }
