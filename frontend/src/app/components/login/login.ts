@@ -1,15 +1,59 @@
-import { Component, inject } from '@angular/core';
-import { userModel } from '../../models/user';
-import { UserService } from '../../services/userService/user-service';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
+import { UserService } from '../../services/userService/user-service';
 
 @Component({
   selector: 'app-login',
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })
-export class Login {
+export class Login implements OnInit {
+  userService: UserService = inject(UserService);
+  router: Router = inject(Router);
+  fb: FormBuilder = inject(FormBuilder);
 
+  loginForm!: FormGroup;
+  errorMessage: string = '';
+  isLoading: boolean = false;
+
+  ngOnInit(): void {
+    this.initializeForm();
+  }
+
+  initializeForm(): void {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
+  }
+
+  login(): void {
+    if (this.loginForm.invalid) {
+      this.errorMessage = 'Please fill in all required fields correctly.';
+      return;
+    }
+
+    this.errorMessage = '';
+    this.isLoading = true;
+
+    const { email, password } = this.loginForm.value;
+    this.userService.login(email, password).subscribe({
+      next: (response) => {
+        this.isLoading = false;
+        if (response?.isSuccess === false) {
+          this.errorMessage = response?.message || 'Login failed.';
+          return;
+        }
+        this.router.navigate(['/home']);
+      },
+      error: (error) => {
+        this.isLoading = false;
+        this.errorMessage =
+          error?.error?.message || error?.message || 'Login failed. Please try again.';
+      },
+    });
+  }
 }

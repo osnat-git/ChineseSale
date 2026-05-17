@@ -1,10 +1,23 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\",
+  "WorkspaceRootPath": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\dal\\donordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\donordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|c:\\users\\\u05D2\u05D9\u05DC\u05D9\\desktop\\project\\chinesesale\\backend\\apiproject\\project\\dal\\categorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\categorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|c:\\users\\\u05D2\u05D9\u05DC\u05D9\\desktop\\project\\chinesesale\\backend\\apiproject\\project\\dal\\carddal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\carddal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|c:\\users\\\u05D2\u05D9\u05DC\u05D9\\desktop\\project\\chinesesale\\backend\\apiproject\\project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+>>>>>>> db2999e492ffa966a00b4583ea8c64cd29575e2c
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +27,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CardDAL.cs",
+              "DocumentMoniker": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CardDAL.cs",
+              "RelativeDocumentMoniker": "Project\\DAL\\CardDAL.cs",
+              "ToolTip": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CardDAL.cs",
+              "RelativeToolTip": "Project\\DAL\\CardDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T12:59:06.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\appsettings.json",
+              "RelativeDocumentMoniker": "Project\\appsettings.json",
+              "ToolTip": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\appsettings.json",
+              "RelativeToolTip": "Project\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-13T08:47:16.479Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "DonorDal.cs",
               "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\DonorDal.cs",
               "RelativeDocumentMoniker": "Project\\DAL\\DonorDal.cs",
               "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\DonorDal.cs",
               "RelativeToolTip": "Project\\DAL\\DonorDal.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAlwCMAAAAQAAAAAAAAAA==",
+=======
+              "Title": "CategoryDal.cs",
+              "DocumentMoniker": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CategoryDal.cs",
+              "RelativeDocumentMoniker": "Project\\DAL\\CategoryDal.cs",
+              "ToolTip": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CategoryDal.cs",
+              "RelativeToolTip": "Project\\DAL\\CategoryDal.cs",
+              "ViewState": "AgIAAG4CAAAAAAAAAAArwJcCAAADAAAAAAAAAA==",
+>>>>>>> db2999e492ffa966a00b4583ea8c64cd29575e2c
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T14:39:03.623Z",
               "EditorCaption": ""
