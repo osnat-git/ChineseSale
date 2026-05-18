@@ -62,17 +62,24 @@ namespace Project.DAL
         }
 
         // צפייה ברשימת המתנות
-        public async Task<Result<Present>> GetAllPresentsAsync()
+        public async Task<Result<Present>> GetAllPresentsAsync(bool onlyActive = true)
         {
             try
             {
                 // מבצעים חיפוש על טבלת המתנות, כולל המידע על התורם וקטגוריה (באמצעות Include)
                 // Using AsNoTracking for better performance and to avoid circular references
-                var presents = await dbContext.Present
+                var query = dbContext.Present
                     .AsNoTracking()
                     .Include(p => p.Donor)  // טוענים את פרטי התורם לכל מתנה
                     .Include(p => p.Category)  // טוענים את פרטי הקטגוריה לכל מתנה
-                    .ToListAsync();  // מבצעים את החיפוש בצורה אסינכרונית
+                    .AsQueryable();
+
+                if (onlyActive)
+                {
+                    query = query.Where(p => p.IsActive);
+                }
+
+                var presents = await query.ToListAsync();  // מבצעים את החיפוש בצורה אסינכרונית
 
                 // תיעוד בלוג שהפונקציה הצליחה
                 logger.LogInformation("Fetched all presents successfully.");
@@ -93,6 +100,47 @@ namespace Project.DAL
                     Success = false,
                     Message = "Error fetching all presents: " + ex.Message,
                     Data = Enumerable.Empty<Present>()  // מחזירים רשימה ריקה במקרה של שגיאה
+                };
+            }
+        }
+
+        // Get present by ID
+        public async Task<Result<Present>> GetPresentByIdAsync(int id)
+        {
+            try
+            {
+                var present = await dbContext.Present
+                    .Include(p => p.Donor)
+                    .Include(p => p.Category)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (present == null)
+                {
+                    logger.LogWarning($"Present with ID {id} not found.");
+                    return new Result<Present>
+                    {
+                        Success = false,
+                        Message = $"Present with ID {id} not found.",
+                        Data = null
+                    };
+                }
+
+                logger.LogInformation($"Fetched present with ID {id} successfully.");
+                return new Result<Present>
+                {
+                    Success = true,
+                    Message = "Fetched present successfully.",
+                    Data = new List<Present> { present }
+                };
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, $"Error fetching present with ID {id}.");
+                return new Result<Present>
+                {
+                    Success = false,
+                    Message = $"Error fetching present with ID {id}: {ex.Message}",
+                    Data = Enumerable.Empty<Present>()
                 };
             }
         }
@@ -131,7 +179,7 @@ namespace Project.DAL
         }
 
 
-        // מחיקת מתנה
+        // מחיקת מתנה (Soft Delete - marks as inactive instead of removing)
         public async Task<Result<Present>> DeletePresentAsync(int presentId)
         {
             try
@@ -150,24 +198,13 @@ namespace Project.DAL
                     };
                 }
 
-                var isPaidCardExists = await dbContext.Card.AnyAsync(c => c.PresentId == presentId);
-                if (isPaidCardExists)
-                {
-                    // אם יש כרטיסים, לא נמחק את המתנה
-                    return new Result<Present>
-                    {
-                        Success = false,
-                        Message = $"Cannot delete present with ID {presentId} because paid cards exist.",
-                        Data = null
-                    };
-                }
-
-                // אם המתנה נמצאה, נמחק אותה
-                dbContext.Present.Remove(present);
+                // Soft Delete: Set IsActive to false instead of removing the record
+                present.IsActive = false;
+                dbContext.Present.Update(present);
                 await dbContext.SaveChangesAsync();  // שומרים את השינויים במסד הנתונים
 
-                // תיעוד בלוג על הצלחה במחיקת המתנה
-                logger.LogInformation($"Present with ID {presentId} deleted successfully.");
+                // תיעוד בלוג על הצלחה במחיקה רכה של המתנה
+                logger.LogInformation($"Present with ID {presentId} soft deleted successfully.");
 
                 return new Result<Present>
                 {
@@ -212,6 +249,7 @@ namespace Project.DAL
                 p.Category = present.Category;
                 p.Quantity = present.Quantity;
                 p.Price = present.Price;
+                p.Description = present.Description;
                 // מעדכנים את פרטי המתנה במסד הנתונים
                 dbContext.Present.Update(p);
                 await dbContext.SaveChangesAsync();  // שומרים את השינויים
@@ -245,7 +283,7 @@ namespace Project.DAL
             try
             {
                 var presents = await dbContext.Present
-                    .Where(p => p.Name.Contains(name))  // סינון לפי שם המתנה
+                    .Where(p => p.IsActive && p.Name.Contains(name))  // Exclude inactive presents
                     .Include(p => p.Donor)  // כולל את המידע על התורם
                     .ToListAsync();
 
@@ -277,7 +315,7 @@ namespace Project.DAL
             try
             {
                 var presents = await dbContext.Present
-                    .Where(p => p.Donor.Name.Contains(donorName))  // סינון לפי שם התורם
+                    .Where(p => p.IsActive && p.Donor.Name.Contains(donorName))  // Exclude inactive presents
                     .Include(p => p.Donor)  // כולל את המידע על התורם
                     .ToListAsync();
 
@@ -308,8 +346,18 @@ namespace Project.DAL
         {
             try
             {
+                // Fix N+1 query issue using GroupBy instead of Count in Where clause
+                // Exclude inactive presents
                 var presents = await dbContext.Present
-                    .Where(p => dbContext.Card.Count(c => c.PresentId == p.Id) == buyerCount)  // סינון לפי מספר הרוכשים
+                    .Where(p => p.IsActive)
+                    .GroupJoin(
+                        dbContext.Card,
+                        p => p.Id,
+                        c => c.PresentId,
+                        (p, cards) => new { Present = p, CardCount = cards.Count() }
+                    )
+                    .Where(x => x.CardCount == buyerCount)
+                    .Select(x => x.Present)
                     .Include(p => p.Donor)  // כולל את המידע על התורם
                     .ToListAsync();
 
@@ -340,7 +388,9 @@ namespace Project.DAL
             try
             {
                 // מקבלים את כל המתנות מסודרות לפי מחיר בסדר עולה
+                // Exclude inactive presents
                 var presents = await dbContext.Present
+                    .Where(p => p.IsActive)
                     .OrderBy(p => p.Price)  // מיון לפי מחיר
                     .Include(p => p.Donor)  // כולל את המידע על התורם
                     .ToListAsync();
@@ -374,7 +424,9 @@ namespace Project.DAL
             try
             {
                 // מקבלים את כל המתנות מסודרות לפי קטגוריה
+                // Exclude inactive presents
                 var presents = await dbContext.Present
+                    .Where(p => p.IsActive)
                     .OrderBy(p => p.Category)  // מיון לפי קטגוריה
                     .Include(p => p.Donor)  // כולל את המידע על התורם
                     .ToListAsync();

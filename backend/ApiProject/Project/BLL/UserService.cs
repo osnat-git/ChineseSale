@@ -20,7 +20,7 @@ namespace Project.BLL
         private readonly IUserDal _userDal;
         private readonly IMapper _mapper;
         private readonly ILogger<UserService> _logger;
-        public UserService(IOptions<JWTSettings> jwtSettings, IUserDal user, IMapper mapper, ILogger<UserService> logger   )
+        public UserService(IOptions<JWTSettings> jwtSettings, IUserDal user, IMapper mapper, ILogger<UserService> logger)
         {
             _jwtSettings = jwtSettings.Value;
             _userDal = user;
@@ -66,17 +66,21 @@ namespace Project.BLL
 
             // יצירת טוקן JWT
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_jwtSettings.SecretKey); // המפתח הסודי מתוך קובץ הקונפיגורציה
+            var key = Encoding.ASCII.GetBytes(_jwtSettings.SecretKey);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[] {
                     new Claim(ClaimTypes.Name, user.Name),
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                    new Claim(ClaimTypes.Role, user.Role)  // Fixed: Use ClaimTypes.Role instead of ClaimTypes.Name
-                }),
-                Expires = DateTime.Now.AddHours(1.5),
-                Issuer = _jwtSettings.Issuer, // המוציא את המידע מתוך קובץ הקונפיגורציה
-                Audience = _jwtSettings.Audience, // קהל היעד מתוך קובץ הקונפיגורציה
+                    new Claim(ClaimTypes.Role, user.Role),
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.MobilePhone, user.Phone ?? ""),
+                    new Claim("isActive", user.IsActive.ToString().ToLower()),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            }),
+                Expires = DateTime.Now.AddMinutes(_jwtSettings.ExpirationInMinutes),
+                Issuer = _jwtSettings.Issuer,
+                Audience = _jwtSettings.Audience,
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -87,7 +91,7 @@ namespace Project.BLL
             return new Result<string>
             {
                 Success = true,
-                Message = tokenString // מחזירים את הטוקן בהודעה 
+                Message = tokenString
             };
         }
 

@@ -1,23 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\",
+  "WorkspaceRootPath": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\dal\\donordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\donordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|c:\\users\\\u05D2\u05D9\u05DC\u05D9\\desktop\\project\\chinesesale\\backend\\apiproject\\project\\dal\\categorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\categorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|c:\\users\\\u05D2\u05D9\u05DC\u05D9\\desktop\\project\\chinesesale\\backend\\apiproject\\project\\dal\\carddal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\carddal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|c:\\users\\\u05D2\u05D9\u05DC\u05D9\\desktop\\project\\chinesesale\\backend\\apiproject\\project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
->>>>>>> db2999e492ffa966a00b4583ea8c64cd29575e2c
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\project.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\project.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\middlewares\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\middlewares\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\middlewares\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\middlewares\\middlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\bll\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\bll\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|m:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\projects\\final2\\chinesesale\\backend\\apiproject\\project\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BCAADC1-35D7-4CAA-9C35-8F1AC4FCEDA0}|Project\\Project.csproj|solutionrelative:project\\dal\\userdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,58 +54,148 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Project\\Properties\\launchSettings.json",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Project\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-18T16:06:43.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Project",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
+              "RelativeDocumentMoniker": "Project\\Project.csproj",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
+              "RelativeToolTip": "Project\\Project.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T16:06:40.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Project\\appsettings.Development.json",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\appsettings.Development.json",
+              "RelativeToolTip": "Project\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-18T15:37:37.143Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CardDAL.cs",
-              "DocumentMoniker": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CardDAL.cs",
-              "RelativeDocumentMoniker": "Project\\DAL\\CardDAL.cs",
-              "ToolTip": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CardDAL.cs",
-              "RelativeToolTip": "Project\\DAL\\CardDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Program.cs",
+              "RelativeDocumentMoniker": "Project\\Program.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Program.cs",
+              "RelativeToolTip": "Project\\Program.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T12:59:06.949Z",
+              "WhenOpened": "2026-05-18T15:35:46.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MiddlewareExtensions.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Middlewares\\MiddlewareExtensions.cs",
+              "RelativeDocumentMoniker": "Project\\Middlewares\\MiddlewareExtensions.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Middlewares\\MiddlewareExtensions.cs",
+              "RelativeToolTip": "Project\\Middlewares\\MiddlewareExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T15:34:08.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RequestLoggingMiddleware.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Middlewares\\RequestLoggingMiddleware.cs",
+              "RelativeDocumentMoniker": "Project\\Middlewares\\RequestLoggingMiddleware.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Middlewares\\RequestLoggingMiddleware.cs",
+              "RelativeToolTip": "Project\\Middlewares\\RequestLoggingMiddleware.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA7wCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T15:32:41.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Project",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
+              "RelativeDocumentMoniker": "Project\\Project.csproj",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
+              "RelativeToolTip": "Project\\Project.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T15:32:13.168Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\appsettings.json",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\appsettings.json",
               "RelativeDocumentMoniker": "Project\\appsettings.json",
-              "ToolTip": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\appsettings.json",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\appsettings.json",
               "RelativeToolTip": "Project\\appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-13T08:47:16.479Z",
+              "WhenOpened": "2026-05-18T15:01:00.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-<<<<<<< HEAD
-              "Title": "DonorDal.cs",
-              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\DonorDal.cs",
-              "RelativeDocumentMoniker": "Project\\DAL\\DonorDal.cs",
-              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\DonorDal.cs",
-              "RelativeToolTip": "Project\\DAL\\DonorDal.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAlwCMAAAAQAAAAAAAAAA==",
-=======
-              "Title": "CategoryDal.cs",
-              "DocumentMoniker": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CategoryDal.cs",
-              "RelativeDocumentMoniker": "Project\\DAL\\CategoryDal.cs",
-              "ToolTip": "C:\\Users\\\u05D2\u05D9\u05DC\u05D9\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\CategoryDal.cs",
-              "RelativeToolTip": "Project\\DAL\\CategoryDal.cs",
-              "ViewState": "AgIAAG4CAAAAAAAAAAArwJcCAAADAAAAAAAAAA==",
->>>>>>> db2999e492ffa966a00b4583ea8c64cd29575e2c
+              "DocumentIndex": 8,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\BLL\\UserService.cs",
+              "RelativeDocumentMoniker": "Project\\BLL\\UserService.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\BLL\\UserService.cs",
+              "RelativeToolTip": "Project\\BLL\\UserService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T14:39:03.623Z",
+              "WhenOpened": "2026-05-18T14:55:04.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Project\\Models\\User.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Models\\User.cs",
+              "RelativeToolTip": "Project\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T14:54:40.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserDal.cs",
+              "DocumentMoniker": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\UserDal.cs",
+              "RelativeDocumentMoniker": "Project\\DAL\\UserDal.cs",
+              "ToolTip": "M:\\\u05DE\u05D7\u05E6\u05D9\u05EA \u05D0\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\DAL\\UserDal.cs",
+              "RelativeToolTip": "Project\\DAL\\UserDal.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:38:39.689Z",
               "EditorCaption": ""
             }
           ]

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\גילי\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj": {}
+    "M:\\מחצית א\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\גילי\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj": {
+    "M:\\מחצית א\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\גילי\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
+        "projectUniqueName": "M:\\מחצית א\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\גילי\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\גילי\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\גילי\\Desktop\\Project\\ChineseSale\\backend\\ApiProject\\Project\\obj\\",
+        "projectPath": "M:\\מחצית א\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\215866328\\.nuget\\packages\\",
+        "outputPath": "M:\\מחצית א\\Projects\\final2\\ChineseSale\\backend\\ApiProject\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\גילי\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\215866328\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,6 +27,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "K:\\פרקטיקום\\נציבות מס הכנסה\\סמינר החדש תשפ_ו\\practicum-nugets": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -111,6 +112,14 @@
               "target": "Package",
               "version": "[8.15.0, )"
             },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -139,7 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

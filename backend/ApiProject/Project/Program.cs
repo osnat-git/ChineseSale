@@ -9,17 +9,35 @@ using Project.BLL;
 using Project.BLL.Interfaces;
 using Project.DAL;
 using Project.DAL.Interfaces;
+using Project.Middlewares;
+using Serilog;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// הגדרת Serilog מותאמת אישית לפורמט נקי
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Verbose()
+    .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
+    .MinimumLevel.Override("Microsoft.AspNetCore", Serilog.Events.LogEventLevel.Warning)
+    .MinimumLevel.Override("Microsoft.EntityFrameworkCore", Serilog.Events.LogEventLevel.Warning)
+    .ReadFrom.Configuration(builder.Configuration)
+    .WriteTo.Console()
+    .WriteTo.File(
+        Path.Combine(AppContext.BaseDirectory, "Logs", "log-.txt"),
+        rollingInterval: RollingInterval.Day,
+        outputTemplate: "{Message:lj}{NewLine}" // מציג רק את המשפט הברור שלך בלי שום תוספת מערכת
+    )
+    .CreateLogger();
 
+builder.Host.UseSerilog();
+
+// Add services to the container.
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 });
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -34,7 +52,6 @@ builder.Services.AddSwaggerGen(c =>
         BearerFormat = "JWT"
     });
 
-    // Add security requirement to all endpoints
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -50,10 +67,12 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Dependency Injection Scopes
 builder.Services.AddScoped<ICardService, CardService>();
 builder.Services.AddScoped<ICardDal, CardDal>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
@@ -100,15 +119,11 @@ builder.Services.AddCors(options =>
     options.AddPolicy("MyAllowSpecificOrigins",
         policy =>
         {
-            // Only allow Angular on localhost:4200
             policy.WithOrigins("http://localhost:4200")
-                  .AllowAnyHeader()  // Allows any header
-                  .AllowAnyMethod(); // Allows any HTTP method
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
         });
 });
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -124,8 +139,11 @@ app.UseHttpsRedirection();
 // Enable CORS middleware
 app.UseCors("MyAllowSpecificOrigins");
 
-app.UseAuthentication(); // Enable authentication
+app.UseAuthentication(); // 1. קודם מפענחים מי המשתמש
 app.UseAuthorization();
+
+// 2. רק אז מפעילים את ה-Middleware של הלוגים (כדי שיוכל לדעת מי המשתמש ולא יכתוב תמיד Anonymous)
+app.UseRequestLogging();
 
 app.MapControllers();
 

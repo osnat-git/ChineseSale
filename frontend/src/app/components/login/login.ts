@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../../services/userService/user-service';
+import { HttpService } from '../../services/httpService/http-service';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,7 @@ import { UserService } from '../../services/userService/user-service';
   styleUrl: './login.scss',
 })
 export class Login implements OnInit {
+  httpService: HttpService = inject(HttpService);
   userService: UserService = inject(UserService);
   router: Router = inject(Router);
   fb: FormBuilder = inject(FormBuilder);
@@ -26,7 +28,7 @@ export class Login implements OnInit {
   initializeForm(): void {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(4)]],
     });
   }
 
@@ -43,6 +45,7 @@ export class Login implements OnInit {
     this.userService.login(email, password).subscribe({
       next: (response) => {
         this.isLoading = false;
+        this.httpService.router.navigate(['/home']);
         if (response?.isSuccess === false) {
           this.errorMessage = response?.message || 'Login failed.';
           return;
